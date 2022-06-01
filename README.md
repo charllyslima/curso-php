@@ -8,4 +8,4 @@
 
 <br>
 
-`Os códigos aqui gerados não necessariamente são iguais ao do curso, irão conter modificações pessoais` 
+`Os códigos aqui gerados não necessariamente são iguais ao do curso, irão conter modificações pessoais.` 
