@@ -1,3 +1,2 @@
-<?php
-    echo("Olá PHP!");
-    
+    <?php
+    echo ("Olá PHP!");

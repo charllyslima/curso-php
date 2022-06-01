@@ -16,21 +16,25 @@
     <nav class="navegacao">
         <a href="index.php" class="vermelho">Voltar</a>
         <?php if (isset($_GET['font']) && !empty($_GET['font'])) { ?>
-            <a href="?dir=<?= $_GET['dir'] ?>&file=<?= $_GET['file'] ?>" class="azul">Resultado</a>
+            <a href="?title=<?= $_GET['title'] ?>&dir=<?= $_GET['dir'] ?>&file=<?= $_GET['file'] ?>" class="azul">Resultado</a>
         <?php } else { ?>
-            <a href="?dir=<?= $_GET['dir'] ?>&file=<?= $_GET['file'] ?>&font=1" class="azul">Código Fonte</a>
+            <a href="?title=<?= $_GET['title'] ?>&dir=<?= $_GET['dir'] ?>&file=<?= $_GET['file'] ?>&font=1" class="azul">Código Fonte</a>
         <?php } ?>
-        <a href="#" class="verde">Sem Formatação</a>
+        <a href="<?= "{$_GET['dir']}/{$_GET['file']}.php" ?>" class="verde">Sem Formatação</a>
     </nav>
     <main class="principal">
         <div class="conteudo">
-            <?php
-            if (isset($_GET['font']) && !empty($_GET['font'])) {
-                echo nl2br(file_get_contents(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php", true));
-            } else {
-                include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
-            }
-            ?>
+            <div class="titulo"><?= $_GET['title'] ?? '' ?></div>
+            <div class="saida">
+
+                <?php
+                if (isset($_GET['font']) && !empty($_GET['font'])) {
+                    echo nl2br(file_get_contents(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php", true));
+                } else {
+                    include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
+                }
+                ?>
+            </div>
         </div>
     </main>
     <footer class="rodape">CHARLLYS DE LIMA ₢ <?= date('Y'); ?></footer>
