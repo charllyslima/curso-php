@@ -70,10 +70,5 @@ body.exercicio {
     height: 87%;
     background-color: #000000;
     color: #4caf50;
-    padding: 10px;
     font-family: "Courier New", Courier, monospace;
-}
-
-.saida::before {
-    content: "> ";
 }
