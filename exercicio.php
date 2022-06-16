@@ -29,7 +29,9 @@
 
                 <?php
                 if (isset($_GET['font']) && !empty($_GET['font'])) {
-                    echo nl2br(file_get_contents(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php", true));
+                ?>
+                    <textarea name="" id="" readonly><?= trim(file_get_contents(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php", true)) ?></textarea>
+                <?php
                 } else {
                     include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
                 }
