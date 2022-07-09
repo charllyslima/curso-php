@@ -9,3 +9,12 @@
 <br>
 
 `Os códigos aqui gerados não necessariamente são iguais ao do curso, irão conter modificações pessoais.` 
+
+## Executando projeto
+
+### Requerimentos
+- Docker
+- Docker Compose
+
+### Executando Docker
+`docker-compose up -d`
