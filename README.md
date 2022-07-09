@@ -12,9 +12,15 @@
 
 ## Executando projeto
 
+Este projeto foi dockenizado para facilitar o uso.
+
 ### Requerimentos
 - Docker
 - Docker Compose
 
-### Executando Docker
-`docker-compose up -d`
+### Executando Projeto
+Execute o seguinte comando no terminal, dentro da pasta do raiz do projeto.
+```
+docker-compose up
+```
+Para sair basta pressionar CTRL+C
